@@ -1,6 +1,6 @@
 {
   "name": "ods-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is an simple api to acces data provided by the \"Online Dienst für Studierende\" a platform used by the Fachhochschule Dortmund",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,9 @@
     "dortmund"
   ],
   "author": "Florian Völker <Neirolf2030@web.de>",
-  "license": "MIT",
+  "repository": "github:feirell/ods-api",
+  "license": "gpl-v3",
+  "files": [],
   "dependencies": {
     "iso-8859-15": "^1.0.0"
   }
