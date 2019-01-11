@@ -66,9 +66,9 @@
 				<p>Be awere that this package is an html parser for the provided page, all data is given by the webpage and there is no liability for their accuracy in any way.</p>
 				<p>Since this is a parser, there might be breaking changes which could completely break the data provided by this package. Please file an GitHub issue if you encounter any problems or wrong data.</p>
 				<p>This package will cache the polled html page. <code>getMetaInformation</code>, <code>getGradesSummary</code> and <code>getGrades</code> use this cache to parse the provided data. The cache has a client side timeout (default 100 minutes). You can clear this cache with <code>clearCache()</code> or you could use the <code>useCache</code> parameter in any of the three get methodes to ignore the cache timeout and request a new version of the html page, this will result in the same behavior as if you would call <code>clearCache</code> and then the methode. You can set the <code>cacheTimeout</code> attribute to change the cache timeout (number in milliseconds).</p>
-				<p>Please see <a href="./classes/_index_.odsconnection.html">ODSConnection</a> for a detailed API documentation.</p>
+				<p>Please see <a href="https://feirell.github.io/ods-api/classes/_index_.odsconnection.html">ODSConnection</a> for a detailed API documentation.</p>
 				<h2 id="examples">Examples</h2>
-				<h3 id="1-example-es8-async-await">1 example - ES8 async await</h3>
+				<h3 id="1-example-es8-async-await">1. example - ES8 async await</h3>
 				<!-- USEFILE: example\\example-01.js -->
 				<pre><code class="language-js"><span class="hljs-keyword">const</span> ODSConnection = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ods-api'</span>);
 
@@ -85,7 +85,7 @@
     <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>).writeFileSync(metaInformation.matriculationNumber + <span class="hljs-string">'.json'</span>, <span class="hljs-built_in">JSON</span>.stringify({ metaInformation, gradesSummy, grades }, <span class="hljs-literal">undefined</span>, <span class="hljs-number">4</span>));
 })()
     .catch(<span class="hljs-built_in">console</span>.error);</code></pre>
-				<h3 id="2-example-es6-with-promise">2 example - ES6 with Promise</h3>
+				<h3 id="2-example-es6-with-promise">2. example - ES6 with Promise</h3>
 				<!-- USEFILE: example\\example-02.js -->
 				<pre><code class="language-js"><span class="hljs-keyword">const</span> ODSConnection = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ods-api'</span>);
 

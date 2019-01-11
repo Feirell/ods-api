@@ -8,11 +8,11 @@ Since this is a parser, there might be breaking changes which could completely b
 
 This package will cache the polled html page. `getMetaInformation`, `getGradesSummary` and `getGrades` use this cache to parse the provided data. The cache has a client side timeout (default 100 minutes). You can clear this cache with `clearCache()` or you could use the `useCache` parameter in any of the three get methodes to ignore the cache timeout and request a new version of the html page, this will result in the same behavior as if you would call `clearCache` and then the methode. You can set the `cacheTimeout` attribute to change the cache timeout (number in milliseconds).
 
-Please see [ODSConnection](./classes/_index_.odsconnection.html) for a detailed API documentation.
+Please see [ODSConnection](https://feirell.github.io/ods-api/classes/_index_.odsconnection.html) for a detailed API documentation.
 
 ## Examples
 
-### 1 example - ES8 async await
+### 1. example - ES8 async await
 
 <!-- USEFILE: example\\example-01.js -->
 ```js
@@ -32,7 +32,7 @@ const ODSConnection = require('ods-api');
 })()
     .catch(console.error);
 ```
-### 2 example - ES6 with Promise 
+### 2. example - ES6 with Promise 
 
 <!-- USEFILE: example\\example-02.js -->
 ```js
