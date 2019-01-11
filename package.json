@@ -1,10 +1,13 @@
 {
   "name": "ods-api",
-  "version": "0.0.2",
+  "version": "0.2.0",
   "description": "This is an simple api to acces data provided by the \"Online Dienst für Studierende\" a platform used by the Fachhochschule Dortmund",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gen-doc": "npm run insert-examples && typedoc --mode modules --entryPoint \"\\\"index\\\"\" --out docs src/index.ts",
+    "insert-examples": "node example/insert-examples.js README.md",
+    "build": "tsc"
   },
   "keywords": [
     "api",
@@ -15,9 +18,13 @@
   ],
   "author": "Florian Völker <Neirolf2030@web.de>",
   "repository": "github:feirell/ods-api",
-  "license": "gpl-v3",
+  "license": "MIT",
   "files": [],
   "dependencies": {
     "iso-8859-15": "^1.0.0"
+  },
+  "devDependencies": {
+    "typedoc": "^0.14.1",
+    "typescript": "^3.2.2"
   }
 }
