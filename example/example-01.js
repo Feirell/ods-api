@@ -1,4 +1,4 @@
-const ODSConnection = require('ods-api');
+const { ODSConnection } = require('ods-api');
 
 (async () => {
     const conn = await ODSConnection.login('username', 'password');

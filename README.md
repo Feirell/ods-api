@@ -16,7 +16,7 @@ Please see [ODSConnection](https://feirell.github.io/ods-api/classes/_index_.ods
 
 <!-- USEFILE: example\\example-01.js -->
 ```js
-const ODSConnection = require('ods-api');
+const { ODSConnection } = require('ods-api');
 
 (async () => {
     const conn = await ODSConnection.login('username', 'password');
@@ -36,7 +36,7 @@ const ODSConnection = require('ods-api');
 
 <!-- USEFILE: example\\example-02.js -->
 ```js
-const ODSConnection = require('ods-api');
+const { ODSConnection } = require('ods-api');
 
 ODSConnection.login('username', 'password')
     .then(conn => conn == null ? null : Promise.all([

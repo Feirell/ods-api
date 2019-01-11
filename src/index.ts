@@ -147,7 +147,7 @@ export interface MetaInformation {
 /**
  * This class represents an session on the ods plattform and enables the access to data provided by the website.
  */
-export default class ODSConnection {
+export class ODSConnection {
     /**
      * The currently used session id to authenticate the user on the webpage
      */

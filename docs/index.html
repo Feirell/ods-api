@@ -70,7 +70,7 @@
 				<h2 id="examples">Examples</h2>
 				<h3 id="1-example-es8-async-await">1. example - ES8 async await</h3>
 				<!-- USEFILE: example\\example-01.js -->
-				<pre><code class="language-js"><span class="hljs-keyword">const</span> ODSConnection = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ods-api'</span>);
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { ODSConnection } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ods-api'</span>);
 
 <span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">async</span> (</span>) =&gt;</span> {
     <span class="hljs-keyword">const</span> conn = <span class="hljs-keyword">await</span> ODSConnection.login(<span class="hljs-string">'username'</span>, <span class="hljs-string">'password'</span>);
@@ -87,7 +87,7 @@
     .catch(<span class="hljs-built_in">console</span>.error);</code></pre>
 				<h3 id="2-example-es6-with-promise">2. example - ES6 with Promise</h3>
 				<!-- USEFILE: example\\example-02.js -->
-				<pre><code class="language-js"><span class="hljs-keyword">const</span> ODSConnection = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ods-api'</span>);
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> { ODSConnection } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ods-api'</span>);
 
 ODSConnection.login(<span class="hljs-string">'username'</span>, <span class="hljs-string">'password'</span>)
     .then(<span class="hljs-function"><span class="hljs-params">conn</span> =&gt;</span> conn == <span class="hljs-literal">null</span> ? <span class="hljs-literal">null</span> : <span class="hljs-built_in">Promise</span>.all([

@@ -1,4 +1,4 @@
-const ODSConnection = require('ods-api');
+const { ODSConnection } = require('ods-api');
 
 ODSConnection.login('username', 'password')
     .then(conn => conn == null ? null : Promise.all([
