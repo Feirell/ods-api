@@ -90,14 +90,21 @@
 				<pre><code class="language-js"><span class="hljs-keyword">const</span> { ODSConnection } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ods-api'</span>);
 
 ODSConnection.login(<span class="hljs-string">'username'</span>, <span class="hljs-string">'password'</span>)
-    .then(<span class="hljs-function"><span class="hljs-params">conn</span> =&gt;</span> conn == <span class="hljs-literal">null</span> ? <span class="hljs-literal">null</span> : <span class="hljs-built_in">Promise</span>.all([
-        conn.getMetaInformation(),
-        conn.getGradesSummary(),
-        conn.getGrades()
-    ]))
+    .then(<span class="hljs-function"><span class="hljs-params">conn</span> =&gt;</span> {
+        <span class="hljs-keyword">if</span> (conn == <span class="hljs-literal">null</span>)
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'either username and / or password was wrong or the the ods service was not reachable'</span>);
+        <span class="hljs-keyword">else</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.all([
+                conn.getMetaInformation(),
+                conn.getGradesSummary(),
+                conn.getGrades()
+
+            ]);
+    })
     .then(<span class="hljs-function">(<span class="hljs-params">[metaInformation, gradesSummy, grades]</span>) =&gt;</span> {
         <span class="hljs-built_in">require</span>(<span class="hljs-string">'fs'</span>).writeFileSync(metaInformation.matriculationNumber + <span class="hljs-string">'.json'</span>, <span class="hljs-built_in">JSON</span>.stringify({ metaInformation, gradesSummy, grades }, <span class="hljs-literal">undefined</span>, <span class="hljs-number">4</span>))
-    }, <span class="hljs-built_in">console</span>.error);</code></pre>
+    })
+    .catch(<span class="hljs-built_in">console</span>.error);</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
