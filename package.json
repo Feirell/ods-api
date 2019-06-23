@@ -1,6 +1,6 @@
 {
   "name": "ods-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is an simple api to acces data provided by the \"Online Dienst für Studierende\" a platform used by the Fachhochschule Dortmund",
   "main": "index.js",
   "scripts": {
