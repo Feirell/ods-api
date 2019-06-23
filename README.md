@@ -14,8 +14,8 @@ Please see [ODSConnection](https://feirell.github.io/ods-api/classes/_index_.ods
 
 ### 1. example - ES8 async await
 
-<!-- USEFILE: example\\example-01.js -->
-```js
+<!-- USEFILE: example\example-01.js -->
+``` js
 const { ODSConnection } = require('ods-api');
 
 (async () => {
@@ -32,10 +32,12 @@ const { ODSConnection } = require('ods-api');
 })()
     .catch(console.error);
 ```
+*You can find this in `example\example-01.js`*
+
 ### 2. example - ES6 with Promise 
 
-<!-- USEFILE: example\\example-02.js -->
-```js
+<!-- USEFILE: example\example-02.js -->
+``` js
 const { ODSConnection } = require('ods-api');
 
 ODSConnection.login('username', 'password')
@@ -55,3 +57,7 @@ ODSConnection.login('username', 'password')
     })
     .catch(console.error);
 ```
+*You can find this in `example\example-02.js`*
+
+
+

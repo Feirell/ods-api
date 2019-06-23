@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "typedoc": "^0.14.1",
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.2",
+    "insert-filecontent-into-markdown": "^0.0.1"
   }
 }
